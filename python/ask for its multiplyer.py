@@ -3,13 +3,13 @@ import os
 import pyfiglet
 
 def calc(num):  
-    for multiplication in range(1, 11):
-        result = num * multiplication
-        last = f"{num} X {multiplication} = {result}"    
-        line = len(last)    
-        time.sleep(1)    
+    for multiplication in range(1, 11): # this serves as function for the increasing multiplyer up to 10
+        result = num * multiplication  # the main logic for computing
+        last = f"{num} X {multiplication} = {result}"  # this is for making a variable that the lenght syntax to read
+        line = len(last)    # lenght syntax will read how many objects are will be printed
+        time.sleep(1)    # added delay so it will be showed individually 
 
-        print("╔" + "═" * line + "╗")
+        print("╔" + "═" * line + "╗") # the "═" will be multiplied to the read lenght that will adapt to any number lenght
         print(f"║{last}║")   
         print("╚" + "═" * line + "╝")         
 
@@ -28,12 +28,12 @@ while True:
     calc(num)
     time.sleep(5)
 
-    choice = input("would You like to try again? (Y/N): ")
+    choice = input("would You like to try again? (Y/N): ") # it will ask the user if they want another table
     
    
     if choice == "N":
         print("Thank you for using!")       
         break
 
-    clear_screen()
+    clear_screen()  # this will run after they want to continue
                     

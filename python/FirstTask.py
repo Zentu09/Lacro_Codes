@@ -70,7 +70,8 @@ while True:   # i added while loop sa main menu para pwede ulit gamitn as well m
 
 
             else:
-                print("Guess too many wrong. Now deleting you IRL")         
+                print("Guess too many wrong. Now deleting you IRL")
+                break
                                                
 
         case "4":

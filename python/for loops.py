@@ -7,6 +7,7 @@ for attempt in range(3):
     if guess == password:
         print("You may enter")
         time.sleep(1)
+        print("\033[F\033[K")
         break
     else:
         print(f"Wrong password. You have {2 - attempt} attempts left")

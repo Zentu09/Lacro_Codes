@@ -9,6 +9,7 @@ def calc(num):
         line = len(last)    
         time.sleep(1)    
 
+
         print("╔" + "═" * line + "╗")
         print(f"║{last}║")   
         print("╚" + "═" * line + "╝")         
@@ -20,15 +21,15 @@ ascii_art = pyfiglet.figlet_format("MULTIPLICATION TABLES")
 print(ascii_art)
 print("Type a number you want to learn its multiplication table!!")
 
-while True:
-    print()
+
+while True:       
     print("===================================")
     num = int(input("Please input a number: "))
     print("===================================")
     calc(num)
     time.sleep(5)
 
-    choice = input("would You like to try again? (Y/N): ")
+    choice = input("Would You like to try again? (Y/N): ")
     
    
     if choice == "N":

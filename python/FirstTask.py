@@ -41,7 +41,7 @@ while True:   # i added while loop sa main menu para pwede ulit gamitn as well m
         case "3":
             myluckynumber = 21
 
-            for attempt in range(15):
+            while True:
                 guess = int(input("Please guess my lucky number!! (1-50): "))  
 
                 try:
@@ -66,13 +66,7 @@ while True:   # i added while loop sa main menu para pwede ulit gamitn as well m
                         time.sleep(2) 
 
                 except ValueError:
-                    print("that is not a number!")                          
-
-
-            else:
-                print("Guess too many wrong. Now deleting you IRL") 
-                break        
-                                               
+                    print("that is not a number!")  
 
         case "4":
             print("Thank you for using!!")     

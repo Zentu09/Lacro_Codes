@@ -1,134 +1,119 @@
 <!DOCTYPE html>
     <html>
 
-    <head>
-        <img src="VALSPE2.jpg" 
-            alt="Photo of my Art"
-            width="200" style="display: block; margin: auto;">
-        <title>My Personal Profile</title>    
-        <style>
-            
-
-            body {background-color: rgb(238, 231, 222);}
-
-            .nodot{list-style-type: none;}
-            .space{padding-left: 50px; padding-right: 50px; padding-bottom: 1px;
-                    margin: 0;}
-
-
-        </style>
+    <head>         
+        
+        <title>My Personal Profile</title>  
+        
+        <link rel="stylesheet" href="styles.css">    
+        
                    
             
     </head>
 
-        <body>
+        <body class="bg_color">
+            <div>
+                <div>
+                    <ul id="heading">
+                        <li class="float"><a class="mix active" href="#home">Home</a></li>
+                        <li class="float"><a class="mix" href="#shuriken">Shuriken</a></li>
+                        <li class="float"><a class="mix" href="#contact">Contact</a></li>
+                        <li class="float"><a class="mix" href="#about">About</a></li>
+                    </ul>
+                </div>
 
-            <h1 style="text-align: center; color: rgb(100, 142, 100); font-family: Calibri; font-size: 60px ;"> Art Louie Lacro </h1>
-            <p style="text-align: center; font-family: Calibri; "> Hello! My name is Art Louie R. Lacro. I am a first-year <br>
-                 college student who loves coding, reading fantasy novels, and playing games </p>
-            <hr>           
+            <img src="VALSPE2.jpg" 
+            alt="Photo of my Art"
+            width="200" style="display: block; margin: auto; margin-top: 100px;">
+                
+                
+                <div>
 
-                <h2 style="text-align: center; font-family: Calibri; margin-top: 70;">My Class Schedule</h2>
-                <table style="border-color:rgb(120, 185, 118); padding: 5px; margin: auto;
-                               background-color: white;" border="10">
-                    <tr>
-                        <th>Day</th>
-                        <th>Subject</th>
-                        <th>Time</th>
-                    </tr>
-                    <tr>
-                        <td style="text-align: center;">Monday</td>                        
-                        <td>
-                            <p class="space" style="padding-top: 10px;">STS</p>
-                            <hr>
-                            <p class="space">Contemporary World</p>
-                            <hr>
-                            <p class="space" style="padding-bottom: 10px;">Introduction to Programming</p>               
-                        </td>    
-                                         
-                        <td>                            
-                                <p class="space" style="padding-top: 10px;"  >12:30PM-2:00PM</p>
-                                <hr>
-                                <p class="space">2:30PM-4:00PM</p>
-                                <hr>
-                                <p class="space" style="padding-bottom: 10px;" >4:00PM-6:00PM</p>                                                       
-                        </td>
-                    </tr>
-                    <tr>
-                        <td style="text-align: center; " class="space">Tuesday</td>                        
-                        <td>
-                            <p class="space" style="padding-top: 10px;">Fundamentals in Programming</p>
-                            <hr>
-                            <p class="space" style="padding-bottom: 10px;">Fundamentals in Programming</p>                                                           
-                        </td>                        
-                        <td>
-                            <p class="space">10:00AM-12:00PM</p>
-                            <hr>
-                            <p class="space">1:00PM-4:00PM</p>                               
-                            
-                        </td>
-                    </tr>
-                    <tr>
-                        <td style="text-align: center;" class="space">Wednesday</td>                        
-                        <td>
-                            <p class="space" style="padding-top: 10px;">Entrepreneurial Mind</p>
-                            <hr>
-                            <p class="space" style="padding-bottom: 10px;">Fundamentals in Programming</p>                            
-                        </td>                        
-                        <td>
-                            <p class="space">8:00AM-11:00PM</p>
-                            <hr>
-                            <p class="space">11:00PM-2:00PM</p>                            
-                        </td>
-                    </tr>
-                    <tr>
-                        <td style="text-align: center;" class="space">Thursday</td>                        
-                        <td>
-                            <p class="space" style="padding-top: 10px;">STS</p>
-                            <hr>
-                            <p class="space">Contemporary World</p>
-                            <hr>
-                            <p class="space">Entrepreneurial Mind</p>
-                            <hr>
-                            <p class="space" style="padding-bottom: 10px;">Fundamentals in Programming</p> 
-                        </td>                        
-                        <td>
-                            <p class="space">12:30PM-2:00PM</p>
-                            <hr>
-                            <p class="space">2:30PM-4:00PM</p>
-                            <hr>
-                            <p class="space">4:00PM-6:00PM</p>
-                            <hr>
-                            <p class="space">6:00PM-9:00PM</p>
+                    <h1 class="name"> Art Louie Lacro </h1>
+                    <p class="sub_pad" style="text-align: center;"> Hello! My name is Art Louie R. Lacro. I am a first-year <br>
+                    college student who loves coding, reading fantasy novels, and playing games </p>
+                </div>
+                <hr> 
+                <div>     
+                    <h2 class="name">My Class Schedule</h2>
+                    <table class="main_border" class="tabbg">
+                        <tr class="sub_pad">
+                            <th class="border_space">Day</th>
+                            <th>Subject</th>
+                            <th>Time</th>
+                        </tr>
+
+                        <tr>
+                            <td style="text-align: center;" rowspan="4" class="sub_pad">Monday</td>  
+                        </tr>
+
+                        <tr><td><ul class="sub_pad"><li>STS</li></ul></td><td>
+                                <ul class="sub_pad">
+                                    <li style="text-align: center;">12:30PM-2:00PM</li></ul></td>
+                        </tr>
+                        <tr><td><ul class="sub_pad"><li>Contemporary World</li></ul>                                                                                           
+                            </td>
+                            <td><ul class="sub_pad"><li style="text-align: center;">2:30PM-4:00PM</li></ul></td> 
+                        </tr>
+                                    
+                        <tr><td><ul class="sub_pad"><li>Introduction to Computing</li></ul>                                                                                           
+                            </td><td><ul class="sub_pad"><li style="text-align: center;">4:00PM-6:00PM</li></ul></td> 
+                        </tr>                       
+
+                        <tr><td class="sub_pad" style="text-align: center; " class="space" rowspan="3">Tuesday</td></tr><tr>                     
+                            <td><div class="sub_pad">Fundamentals in Programming</div></td> 
+                            <td><ul class="sub_pad"><li style="text-align: center;">10:00AM-12:00PM</li></ul></td>              
+                        </tr>
+                        <tr><td><ul class="sub_pad"><li>Fundamentals in Programming</li></ul></td> 
+                            <td><ul class="sub_pad"><li style="text-align: center;">1:00PM-4:00PM</li></ul></td>              
+                        </tr><tr><td class="sub_pad" style="text-align: center;" class="space" rowspan="3">Wednesday</td>  
+                        </tr><tr><td><ul class="sub_pad"><li>Entrepreneurial Mind</li></ul></td><td>
+                                <ul class="sub_pad"><li style="text-align: center;">8:00AM-11:00PM</li></ul></td></tr>
+                        <tr><td><ul class="sub_pad"><li>Introduction to Computing</li></ul></td> 
+                            <td><ul class="sub_pad"><li style="text-align: center;">11:00AM-2:00PM</li></ul></td>              
+                        </tr>
+                        <tr><td class="sub_pad" style="text-align: center;" class="space" rowspan="5">Thursday</td></tr>
+                        <tr><td><ul class="sub_pad"><li>STS</li></ul></td> 
+                            <td><ul class="sub_pad"><li style="text-align: center;">12:30PM-2:00PM</li></ul></td>              
+                        </tr>                           
+                        <tr><td><ul class="sub_pad"><li>Contemporary World</li></ul></td> 
+                            <td><ul class="sub_pad"><li style="text-align: center;">2:30PM-4:00PM</li></ul></td>              
+                        </tr>     
+                        <tr><td><ul class="sub_pad"><li>FCL</li></ul></td>
+                            <td><ul class="sub_pad"><li style="text-align: center;">4:00PM-6:00PM</li></ul></td>              
+                        </tr>     
+                        <tr><td><ul class="sub_pad"><li>Discrete Structures</li></ul></td> 
+                            <td><ul class="sub_pad"><li style="text-align: center;">6:00PM-9:00PM</li></ul></td>              
+                        </tr>     
+                    </table>
+                </div>
+
+                    <hr>
+                <div>
+
+                    <h2 class="name">My Activities</h2>
+                    <table class="last_border">
+                        <tr class="sub_pad">
+                            <th>Subject Name</th>
+                            <th>Activity Name</th>
+                            <th>Date</th>
+                            <th>Remarks</th>
+                        </tr>
+                        <tr class="sub_pad">
+                            <td style="text-align: center; padding: 50px;">Introduction to Computing</td>                        
+                            <td>
+                                    <p class="space">HTML Basic Structure</p>                                                 
+                            <td>
+                                <p class="space">08/13/25</p>
+                            </td>                  
                         
-                        </td>
-                    </tr>
-                </table>
-
-                <hr>
-
-                <h2 style="text-align: center; margin-top: 50px; font-family: Calibri;">My Activities</h2>
-                <table style="border-color:rgb(120, 185, 118); padding: 5px; margin: auto;
-                               background-color: white;" border="10">
-                    <tr>
-                        <th>Subject Name</th>
-                        <th>Activity Name</th>
-                        <th>Date</th>
-                        <th>Remarks</th>
-                    </tr>
-                    <tr>
-                        <td style="text-align: center; padding: 50px;">Introduction to Computing</td>                        
-                        <td>
-                                <p class="space">HTML Basic Structure</p>                                                 
-                        <td>
-                            <p class="space">08/13/25</p>
-                        </td>                  
-                    
-                        <td> <img src="act.png" width="200">
-                        </td>
-                    </tr> 
-                </table>   
-
+                            <td> <img src="act.png" width="200">
+                            </td>
+                        </tr> 
+                    </table> 
+                </div>  
+            </div>
+            
         </body>
        
     </html>

@@ -7,7 +7,7 @@ def calc(num):
         result = num * multiplication  # the main logic for computing
         last = f"{num} X {multiplication} = {result}"  # this is for making a variable that the lenght syntax to read
         line = len(last)    # lenght syntax will read how many objects are will be printed
-        time.sleep(1)    # added delay so it will be showed individually 
+        time.sleep(0.6)    # added delay so it will be showed individually 
 
         print("╔" + "═" * line + "╗") # the "═" will be multiplied to the read lenght that will adapt to any number lenght
         print(f"║{last}║")   
@@ -28,10 +28,10 @@ while True:
     calc(num)
     time.sleep(5)
 
-    choice = input("would You like to try again? (Y/N): ") # it will ask the user if they want another table
+    choice = input("would You like to make a new table? (Y/N): ").strip().lower() # it will ask the user if they want another table
     
    
-    if choice == "N":
+    if choice == "n":
         print("Thank you for using!")       
         break
 

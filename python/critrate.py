@@ -13,9 +13,7 @@ while True:
     print("Wolf fang (C)")
     skill = input("choose a skill: ")
  
-    wolf_strike(skill)
-
-    basedmg = abs(hash(str(base * 100%)))
+    wolf_strike(skill) 
 
     match skill:
         case "X":
@@ -25,4 +23,4 @@ while True:
             wolf_strike(skill)
 
         case _:
-
+            break

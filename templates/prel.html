@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+    <html>
+        <head>
+            <title>Grade Calculator</title>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            
+
+            <link rel="stylesheet" href="{{ url_for('static', filename='prel.css') }}">
+
+        </head>
+        <body>
+
+            <h1 class="firefly">Firefly</h1>
+           
+           
+        <div class="maingrid mainbox">   
+           <div>
+                <h1 class="prelhead">Prelim Grades Calculator</h1>
+             
+                <form class="inspace" action="/" method="post">
+                    <div class="gradesbg maintxt">
+                        <div class="form_group">
+                            <label class="text" for="absence">Number of Absence:</label>
+                            <input class="box" type="number" name="absence" min="0" max="4" value="{{ request.form.absence }}" required>
+                        </div class="form_group">
+                        <div class="form_group">
+                            <label class="text" for="prel_exam">Prelim Exam Grade:</label>
+                            <input class="box" type="number" name="prel_exam" min="0" max="100" value="{{ request.form.prel_exam }}" required>
+                        </div >
+                        <div class="form_group">
+                            <label class="text" for="quiz">Quizzez Grade:</label>
+                            <input class="box" type="number" name="quiz" min="0" max="100" value="{{ request.form.quiz}}" required>
+                        </div>
+                        <div class="form_group">
+                            <label class="text" for="requirments">Requirments Grade:</label>
+                            <input class="box" type="number" name="requirments" min="0" max="100" value="{{ request.form.requirments }}" required>
+                        </div>
+                        <div class="form_group">
+                            <label class="text" for="recitation">Recitation Grade:</label>
+                            <input class="box" type="number" name="recitation" min="0" max="100" value="{{ request.form.recitation }}" required>
+                        </div>  
+                    </div>      
+                    <input type="checkbox" id="showResult" hidden>            
+                    <button type="submit" class="button" for="showResult">SUBMIT</button>                  
+                </form> 
+               
+            </div>
+
+            
+            <div style="padding-bottom: 40px;">
+               
+                {% if Prelim is not none or final or warning %}   
+                    <div class="inspace" style="position: relative;">
+                    <div class="gradesbg2 maintxt">
+                {% if Prelim is not none %}                        
+                    <div class="grade">{{Prelim}} </div> 
+                    <p class="final" style="margin-top: 40px;">This is your Prelim Grade</p>
+                {% endif %}
+                {% if warning %}
+                    <h1 class="warning">{{ warning }}</h1>
+                {% endif %}
+                    <p class="res final">{{ final }}</p>                        
+                    </div>
+                        <button class="button" type="button" onclick="window.location.href='/'">RESET</button>
+                    </div>
+            {% endif %}
+        </div>
+        </body>
+    </html>

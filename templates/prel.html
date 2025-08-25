@@ -18,18 +18,18 @@
            <div>
                 <h1 class="prelhead">Prelim Grades Calculator</h1>
              
-                <form class="inspace" action="/" method="post">
-                    <div class="gradesbg maintxt">
+                <form class="inspace" action="/#target" method="post">
+                    <div class="gradesbg">
                         <div class="form_group">
                             <label class="text" for="absence">Number of Absence:</label>
                             <input class="box" type="number" name="absence" min="0" max="4" value="{{ request.form.absence }}" required>
-                        </div class="form_group">
+                        </div>
                         <div class="form_group">
                             <label class="text" for="prel_exam">Prelim Exam Grade:</label>
                             <input class="box" type="number" name="prel_exam" min="0" max="100" value="{{ request.form.prel_exam }}" required>
                         </div >
                         <div class="form_group">
-                            <label class="text" for="quiz">Quizzez Grade:</label>
+                            <label class="text" for="quiz">Quizzes Grade:</label>
                             <input class="box" type="number" name="quiz" min="0" max="100" value="{{ request.form.quiz}}" required>
                         </div>
                         <div class="form_group">
@@ -40,31 +40,43 @@
                             <label class="text" for="recitation">Recitation Grade:</label>
                             <input class="box" type="number" name="recitation" min="0" max="100" value="{{ request.form.recitation }}" required>
                         </div>  
-                    </div>      
-                    <input type="checkbox" id="showResult" hidden>            
-                    <button type="submit" class="button" for="showResult">SUBMIT</button>                  
+                    </div>   
+                    <div>                         
+                        <div>                            
+                            <input type="checkbox" id="showResult" hidden>                                                             
+                            <button type="submit" class="button" for="showResult" onclick="scrollDown()">SUBMIT </button> 
+                                            
+                        </div>
+                    </div>
                 </form> 
                
             </div>
 
-            
-            <div style="padding-bottom: 40px;">
-               
-                {% if Prelim is not none or final or warning %}   
+            {% if Prelim is not none or final or warning or head %}  
+            <div style="padding-bottom: 40px;" id="result-container">              
+                 
                     <div class="inspace" style="position: relative;">
                     <div class="gradesbg2 maintxt">
                 {% if Prelim is not none %}                        
-                    <div class="grade">{{Prelim}} </div> 
-                    <p class="final" style="margin-top: 40px;">This is your Prelim Grade</p>
+                    <div id="target" class="grade">{{Prelim}} </div> 
+                    <p class="final" style="margin-top: 10px;">This is your Prelim Grade</p>
                 {% endif %}
                 {% if warning %}
                     <h1 class="warning">{{ warning }}</h1>
                 {% endif %}
-                    <p class="res final">{{ final }}</p>                        
-                    </div>
-                        <button class="button" type="button" onclick="window.location.href='/'">RESET</button>
-                    </div>
+                    <div class="res final" style="margin-top: 35px;">{{ final }}</div> 
+                    <div class="res final" style="margin-top: 15px;">{{head}}</div>                       
+                    </div>                    
+                        <button class="reset" type="button" onclick="window.location.href='/'">RESET</button>
+            </div>
+            
             {% endif %}
+
+            <script>
+                function scrollDown() {
+                    document.getElementById('target').scrollIntoView({ behavior: 'smooth' });
+                }
+            </script>
         </div>
         </body>
     </html>

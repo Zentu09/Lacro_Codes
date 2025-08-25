@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+    <html>
+        <head>
+            <title>Multiplication Table</title>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">            
+
+            <link rel="stylesheet" href="{{ url_for('static', filename='McPb.css') }}">
+
+        </head>
+        <body>
+            <h1 style="text-align: center; font-size: 60px; color: #03B966;">Multiplication Table Generator</h1>
+            <div  class="calc">
+                <div>
+                    
+                    <form action="/" method="post"  class="displaygrid">
+                        
+                        <div>                            
+                            <input class="box" type="number" name="given" value="{{ request.form.given}}" required>
+                            <label for="given">Input a number you want:</label>
+                        </div>
+                        <div>
+                            <button type="submit" class="submit" for="showResult">SUBMIT</button> 
+                        </div>
+                    </form>
+                </div>
+                <div>
+                    {% if last %}
+                        <div style="margin-top: 30px;"> 
+                            <table>
+                                <tr>
+                                    <th class="table top">Multiplication Table</th>
+                                </tr>
+                                <tbody>
+                                {% for item in last %}
+                                    <tr {% if loop.last %} class="bot" {% endif %}> 
+                                        <td class="table">{{item}}</td>
+                                    </tr>
+                                </tbody>                                
+                                {% endfor %}
+                            </table>                           
+                        </div>
+                        </div>
+                            <button class="reset" type="button" onclick="window.location.href='/'">RESET</button>
+                        </div> 
+                    {% endif %}
+                    {% if warning %}
+                        <h1 class="warning">{{ warning }}</h1>
+                    {% endif %}                    
+                </div>      
+            </div>
+
+        </body>
+    </html>
